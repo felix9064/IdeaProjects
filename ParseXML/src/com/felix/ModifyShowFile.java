@@ -38,6 +38,11 @@ public class ModifyShowFile {
         }
     }
 
+    /**
+     * 解析show文件，并将show文件中Window节点下的width属性值改为780
+     * @param fileName show文件所在路径
+     * @return 解析show文件得到的Document对象
+     */
     public static Document parseShowFile(String fileName) {
         File show = new File(fileName);
         SAXReader reader = new SAXReader();
@@ -59,6 +64,11 @@ public class ModifyShowFile {
         return null;
     }
 
+    /**
+     * 将修改后的Document对象写入新的文件
+     * @param document 修改后的document对象
+     * @param newFilePath 将要写入的文件路径
+     */
     public static void writeShowFile(Document document, String newFilePath) {
         // 获得文件名
         String name = document.getRootElement().attribute("name").getText();
