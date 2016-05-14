@@ -1,2 +1,8 @@
 # IdeaProjects
 使用Intellij IDEA开发的一些java项目集合
+
+#HelloWorld
+一个java的helloworld示例程序
+
+#ParseXML
+使用dom4j解析长亮柜面的show文件，修改其中Window节点下的width属性的值
