@@ -18,7 +18,7 @@ public class Person {
     }
 
     /**
-     * 该方法是检验一个人是否出生于1946年到1964年期间；
+     * 该方法是检验一个人是否出生于1946年到1964年期间
      * 该方法每次被调用的时候，都会新建一个Calendar、一个TimeZone和两个Date实例，这是不必要的。
      * @return  true 是；false 否
      */
