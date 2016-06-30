@@ -6,7 +6,7 @@ package com.felix.thinkjava.chapter08;
 public class TestSuperClass10 {
 
     public void print(String str) {
-        System.out.println("输出：" + str);
+        System.out.println("父类输出：" + str);
     }
 
     public void doSomething() {
