@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--
+    <bean id="hello_felix" class="com.felix.spring.demo.HelloMessage">
+        <property name="message" value="Hello Felix"/>
+    </bean>
+
+    <bean id="singleton" class="com.felix.spring.demo.HelloMessage"
+          scope="singleton" init-method="init" destroy-method="destroy">
+        <property name="message" value="为了测试bean的生命周期"/>
+    </bean>
+
+    <bean class="com.felix.spring.demo.InitHelloMessage" />
+-->
+    <bean id="hello_world" class="com.felix.spring.demo.HelloMessage"
+          init-method="init" destroy-method="destroy">
+        <property name="message" value="Hello Message"/>
+    </bean>
+
+    <bean id="hello_india" class="com.felix.spring.demo.HelloIndia" parent="hello_world">
+        <property name="hello" value="Hello"/>
+    </bean>
+
+</beans>

@@ -21,7 +21,7 @@ public class ScreeShot {
             BufferedImage screenshot = robot.createScreenCapture(new Rectangle(0,
                     0,(int)dimension.getWidth(),(int)dimension.getHeight()));
 
-            String savePath = "C:/Users/zhang/Desktop/";
+            String savePath = "C:/Users/Felix/Desktop/";
             File dir = new File(savePath);
             if(!dir.exists()){
                 dir.mkdir();

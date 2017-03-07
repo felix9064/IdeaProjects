@@ -16,18 +16,18 @@ public class Music {
     }
 
     public static void main(String[] args) {
-//        Wind flute = new Wind();
-//        tune(flute);
+       Wind flute = new Wind();
+       tune(flute);
 
-        Instrument [] orchestra = {
-                new Wind(),
-                new Percussion(),
-                new Stringed(),
-                new Brass(),
-                new Woodwind()
-        };
+        // Instrument [] orchestra = {
+        //         new Wind(),
+        //         new Percussion(),
+        //         new Stringed(),
+        //         new Brass(),
+        //         new Woodwind()
+        // };
 
-        tuneAll(orchestra);
+        // tuneAll(orchestra);
 
 
     }
