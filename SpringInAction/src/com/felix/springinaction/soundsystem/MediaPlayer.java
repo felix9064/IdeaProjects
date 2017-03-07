@@ -5,5 +5,7 @@ package com.felix.springinaction.soundsystem;
  */
 public interface MediaPlayer {
 
+
     void play();
+
 }
