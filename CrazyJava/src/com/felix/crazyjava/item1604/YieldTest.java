@@ -9,7 +9,7 @@ package com.felix.crazyjava.item1604;
  */
 public class YieldTest extends Thread {
 
-    public YieldTest(String name) {
+    private YieldTest(String name) {
         super(name);
     }
 
