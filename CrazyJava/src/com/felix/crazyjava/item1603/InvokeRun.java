@@ -2,7 +2,7 @@ package com.felix.crazyjava.item1603;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 线程对象直接调用run()方法，而不是调用start()方法启动线程，这样的程序是单线程
  * Author: Felix
  * Date: 2017/3/7
  * Time: 14:22

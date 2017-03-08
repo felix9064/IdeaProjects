@@ -2,7 +2,7 @@ package com.felix.crazyjava.item1603;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 试图启动一个已经处于死亡状态的线程
  * Author: Felix
  * Date: 2017/3/7
  * Time: 20:26
