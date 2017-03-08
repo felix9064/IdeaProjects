@@ -2,7 +2,7 @@ package com.felix.crazyjava.item1604;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: Join线程，调用join线程后，主线程必须等到join线程执行完后才会继续往下执行
  * Author: Felix
  * Date: 2017/3/7
  * Time: 20:58
