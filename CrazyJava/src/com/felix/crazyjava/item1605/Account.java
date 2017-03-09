@@ -1,5 +1,7 @@
 package com.felix.crazyjava.item1605;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * Created with IntelliJ IDEA.
  * Description: 通过一个取钱的操作来模拟线程安全问题，账户实体类
@@ -8,6 +10,8 @@ package com.felix.crazyjava.item1605;
  * Time: 13:24
  */
 public class Account {
+
+    private final ReentrantLock lock = new ReentrantLock();
 
     private String accountNo;
     private double balance;
@@ -41,22 +45,28 @@ public class Account {
     }
 
     // 提供一个线程安全的draw()方法来完成取钱操作
-    public synchronized void draw(double drawAmount) {
-        // 账户余额大于要取的金额时
-        if (balance >= drawAmount) {
-            // 吐出钞票
-            System.out.println(Thread.currentThread().getName() + "取钱成功！吐出钞票： " + drawAmount);
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    public void draw(double drawAmount) {
+        // 加锁
+        lock.lock();
+        try {
+            // 账户余额大于要取的金额时
+            if (balance >= drawAmount) {
+                // 吐出钞票
+                System.out.println(Thread.currentThread().getName() + "取钱成功！吐出钞票： " + drawAmount);
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
 
-            // 修改账户余额
-            balance -= drawAmount;
-            System.out.println("\t 余额为：" + balance);
-        } else {
-            System.out.println(Thread.currentThread().getName() + "取钱失败！余额不足！");
+                // 修改账户余额
+                balance -= drawAmount;
+                System.out.println("\t 余额为：" + balance);
+            } else {
+                System.out.println(Thread.currentThread().getName() + "取钱失败！余额不足！");
+            }
+        } finally {
+            lock.unlock();
         }
     }
 
