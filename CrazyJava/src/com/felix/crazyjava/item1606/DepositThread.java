@@ -19,6 +19,7 @@ public class DepositThread extends Thread {
         this.depositAmount = depositAmount;
     }
 
+    // 重复100次执行存钱操作
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {

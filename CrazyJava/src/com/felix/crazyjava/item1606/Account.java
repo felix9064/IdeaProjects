@@ -2,7 +2,7 @@ package com.felix.crazyjava.item1606;
 
 /**
  * Created with IntelliJ IDEA.
- * Description: 模拟线程间通讯
+ * Description: 通过不断的存钱和取钱操作来模拟线程间通讯
  * Author: Felix
  * Date: 2017/3/9
  * Time: 14:13
