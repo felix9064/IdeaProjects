@@ -8,25 +8,19 @@ import java.util.List;
  * Created with IntelliJ IDEA.
  * Description:
  * Author: Felix
- * Date: 2017/3/9
- * Time: 20:19
+ * Date: 2017/3/10
+ * Time: 11:08
  */
-public class UserDAO {
+public interface UserDAO {
 
-    public List<User> getUser() {
-        return null;
-    }
+    public User getUserById(String userid);
 
-    public void addUser(User user) {
+    public List<User> getUserByBrchno(String brchno);
 
-    }
+    public void addUser(User user);
 
-    public void updateUser(User user) {
+    public void updateUserById(String userid);
 
-    }
-
-    public void deleteUser(User user) {
-
-    }
+    public void deleteUserById(String userid);
 
 }

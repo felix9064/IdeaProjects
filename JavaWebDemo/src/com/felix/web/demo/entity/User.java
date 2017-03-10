@@ -1,5 +1,7 @@
 package com.felix.web.demo.entity;
 
+import java.io.Serializable;
+
 /**
  * Created with IntelliJ IDEA.
  * Description:
@@ -7,19 +9,19 @@ package com.felix.web.demo.entity;
  * Date: 2017/3/9
  * Time: 20:14
  */
-public class User {
+public class User implements Serializable {
 
     private String userid;
     private String userna;
     private String brchno;
-    private int userst;
-    private int ussatg;
+    private String userst;
+    private String ussatg;
 
-    private int lastlg;
-    private int lstrdt;
-    private int usertp;
+    private String lastlg;
+    private String lstrdt;
+    private String usertp;
 
-    private int menugp;
+    private String menugp;
 
     public String getUserid() {
         return userid;
@@ -45,51 +47,51 @@ public class User {
         this.brchno = brchno;
     }
 
-    public int getUserst() {
+    public String getUserst() {
         return userst;
     }
 
-    public void setUserst(int userst) {
+    public void setUserst(String userst) {
         this.userst = userst;
     }
 
-    public int getUssatg() {
+    public String getUssatg() {
         return ussatg;
     }
 
-    public void setUssatg(int ussatg) {
+    public void setUssatg(String ussatg) {
         this.ussatg = ussatg;
     }
 
-    public int getLastlg() {
+    public String getLastlg() {
         return lastlg;
     }
 
-    public void setLastlg(int lastlg) {
+    public void setLastlg(String lastlg) {
         this.lastlg = lastlg;
     }
 
-    public int getLstrdt() {
+    public String getLstrdt() {
         return lstrdt;
     }
 
-    public void setLstrdt(int lstrdt) {
+    public void setLstrdt(String lstrdt) {
         this.lstrdt = lstrdt;
     }
 
-    public int getUsertp() {
+    public String getUsertp() {
         return usertp;
     }
 
-    public void setUsertp(int usertp) {
+    public void setUsertp(String usertp) {
         this.usertp = usertp;
     }
 
-    public int getMenugp() {
+    public String getMenugp() {
         return menugp;
     }
 
-    public void setMenugp(int menugp) {
+    public void setMenugp(String menugp) {
         this.menugp = menugp;
     }
 
