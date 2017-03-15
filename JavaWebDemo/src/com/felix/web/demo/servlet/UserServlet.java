@@ -29,8 +29,8 @@ public class UserServlet extends HttpServlet {
         User user = userdao.getUserById(userid);
 
         if(user != null) {
-            request.setAttribute("userst", user.getUserst());
-            response.sendRedirect("success.jsp");
+            request.setAttribute("user", user);
+            request.getRequestDispatcher("success.jsp").forward(request, response);
         }
 
     }

@@ -23,7 +23,7 @@ public class UserDAOImpl implements UserDAO {
 
         String sql = "select * from kub_user where userid=" + userid;
         User user = null;
-        ResultSet rs = DBHelp.executeSql(sql);
+        ResultSet rs = DBHelp.executeQuerySql(sql);
         try {
             while (rs.next()) {
                 user = new User();

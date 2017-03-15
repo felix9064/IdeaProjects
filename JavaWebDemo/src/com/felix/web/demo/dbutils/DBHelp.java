@@ -30,7 +30,7 @@ public class DBHelp {
         try {
             Class.forName(DRIVER);
             conn = DriverManager.getConnection(URL, USER, PASS);// 获取连接
-            System.out.println("连接数据库成功");
+            // System.out.println("连接数据库成功");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
             return null;
@@ -68,7 +68,7 @@ public class DBHelp {
         }
     }
 
-    public static ResultSet executeSql(String sql) {
+    public static ResultSet executeQuerySql(String sql) {
         connection = getConnection();
         if (connection == null) {
             return null;
