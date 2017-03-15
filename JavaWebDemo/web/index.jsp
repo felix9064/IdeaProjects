@@ -14,6 +14,6 @@
     <title>柜面系统常用功能</title>
   </head>
   <body>
-  你好哇！${userst}!
+  你好哇！<%=userst %>
   </body>
 </html>
