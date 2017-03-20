@@ -1,4 +1,4 @@
-package com.felix.crazyjava.item0601;
+package com.felix.crazyjava.item0602;
 
 /**
  * Created with IntelliJ IDEA.
