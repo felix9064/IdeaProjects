@@ -47,6 +47,7 @@ public class CompileClassLoader extends ClassLoader {
         System.out.println("要运行的文件：" + name);
         Class clazz = null;
         String fileStub = name.replace(".", "/");
+
         String javaFilename = fileStub + ".java";
         String classFilename = fileStub + ".class";
 
@@ -87,9 +88,12 @@ public class CompileClassLoader extends ClassLoader {
             System.out.println("java CompileClassLoader ClassName");
         }
 
+        // 要运行的类名
         String progClass = args[0];
+        // 给要运行的类传的参数列表
         String[] progArgs = new String[args.length - 1];
         System.arraycopy(args, 1, progArgs, 0, progArgs.length);
+
         CompileClassLoader ccl = new CompileClassLoader();
         Class<?> clazz = ccl.loadClass(progClass);
         Method method = clazz.getMethod("main", (new String [0]).getClass());
