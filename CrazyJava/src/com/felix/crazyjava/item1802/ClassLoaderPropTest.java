@@ -7,7 +7,8 @@ import java.util.Enumeration;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 类加载器的层级关系。系统类加载器的parent是扩展类加载器
+ *              扩展类加载器的parent是null，根类加载器是由jvm实现的
  * Author: Felix
  * Date: 2017/4/1
  * Time: 10:15
@@ -24,10 +25,10 @@ public class ClassLoaderPropTest {
         }
 
         ClassLoader ext = cl.getParent();
-        System.out.println("扩展类加载器：" + ext.toString());
+        System.out.println("系统类加载器的parent为：" + ext.toString());
         System.out.println("扩展类加载器的加载路径：" + System.getProperty("java.ext.dirs"));
 
-        System.out.println("扩展类加载器的parent：" + ext.getParent());
+        System.out.println("扩展类加载器的parent为：" + ext.getParent());
 
     }
 }

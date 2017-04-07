@@ -2,7 +2,7 @@ package com.felix.crazyjava.item1802;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 提供给CompileClassLoader进行加载的类
  * Author: Felix
  * Date: 2017/4/1
  * Time: 15:24

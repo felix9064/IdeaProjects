@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created with IntelliJ IDEA.
- * Description: 自定义类加载器，可以编译并运行指定java文件
+ * Description: 自定义类加载器，可以编译并运行指定java文件，本例中加载Hello.class
  * Author: Felix
  * Date: 2017/4/1
  * Time: 14:06
