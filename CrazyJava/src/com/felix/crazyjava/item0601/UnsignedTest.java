@@ -18,7 +18,7 @@ public class UnsignedTest {
         int val = Integer.parseUnsignedInt("ab", 16);
         System.out.println(val);
 
-        System.out.println(Integer.toUnsignedString(-12, 16));
+        System.out.println(Integer.toUnsignedString(-12, 10));
 
     }
 }

@@ -2,7 +2,7 @@ package com.felix.crazyjava.item0601;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 基本类型变量 和 字符串变量之间的互转
  * Author: Felix
  * Date: 2017/3/16
  * Time: 14:13
@@ -16,6 +16,7 @@ public class Primitive2String {
         int it1 = Integer.parseInt(intStr);
         int it2 = new Integer(intStr);
         System.out.println(it1 == it2);
+
         /**
          * 下面两个输出表达式的比较结果之所以不同，是与java的Integer类的设计有关
          * 系统把一个 -128~127之间的整数自动装箱成Integer实例，并放入了一个名为cache的数组中缓存起来
@@ -27,9 +28,12 @@ public class Primitive2String {
         Integer int2 = 127;
         System.out.println(int1 == int2);
 
-        Integer biga = 128;
-        Integer bigb = 128;
-        System.out.println(biga == bigb);
+        Integer a = 128;
+        Integer b = 128;
+        System.out.println(a == b);
+        System.out.println(Integer.compare(a, b));
 
+        System.out.println(Integer.parseUnsignedInt("7FF" , 16));
+        System.out.println(Integer.parseUnsignedInt("FFFFFFF6", 16));
     }
 }
