@@ -14,9 +14,19 @@ public class NullAccessStatic {
         System.out.println("static 修饰的类方法");
     }
 
-    public static void main(String[] args) {
+    private void print() {
+        System.out.println("实例方法");
+    }
+
+    public static void main(String[] args) throws InterruptedException {
         NullAccessStatic nas = null;
+        // 调用类方法不会抛空指针异常
         nas.test();
+
+        Thread.sleep(1000);
+
+        // 会抛空指针异常
+        nas.print();
     }
 
 }
