@@ -15,7 +15,8 @@ public class Triangle extends Shape {
     private double c;
 
     public Triangle(String color, double a, double b, double c) {
-        super(color);
+        // super(color);
+        setColor(color);
         this.setSides(a, b, c);
     }
 

@@ -11,20 +11,24 @@ package com.felix.crazyjava.item0605;
 public abstract class Shape {
 
     {
-        System.out.println("执行Shape的初始化块...");
+        System.out.println("执行抽象类Shape的初始化块...");
     }
 
     private String color;
 
-    public Shape() {}
+    public Shape() {
+        System.out.println("执行抽象类Shape的无参构造器");
+    }
 
     public Shape(String color) {
-        System.out.println("执行Shape的构造器");
+        System.out.println("执行抽象类Shape的带参构造器");
         this.color = color;
     }
 
+    // 定义一个计算周长的抽象方法
     public abstract double calPerimeter();
 
+    // 定义一个返回形状的抽象方法
     public abstract String getType();
 
     public String getColor() {
