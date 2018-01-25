@@ -2,7 +2,7 @@ package com.felix.crazyjava.item0602;
 
 /**
  * Created with IntelliJ IDEA.
- * Description:
+ * Description: 重写toString()方法
  * Author: Felix
  * Date: 2017/3/17
  * Time: 14:45
