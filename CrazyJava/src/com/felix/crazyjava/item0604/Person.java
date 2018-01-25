@@ -35,8 +35,14 @@ public class Person {
         Person p = new Person(n);
 
         System.out.println(p.getName().getFirstName());
+
         n.setFirstName("四");
-        System.out.println(p.getName().getFirstName());
+        n.setLastName("李");
+        System.out.println(p.getName().getFirstName() + " " + p.getName().getLastName());
+
+        p.getName().setLastName("四");
+        p.getName().setFirstName("李");
+        System.out.println(p.getName().getFirstName() + " " + p.getName().getLastName());
 
     }
 }

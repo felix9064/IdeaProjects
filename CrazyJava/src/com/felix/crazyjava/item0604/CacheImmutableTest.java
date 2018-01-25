@@ -11,6 +11,7 @@ public class CacheImmutableTest {
 
     public static void main(String[] args) {
         CacheImmutable c1 = CacheImmutable.valueOf("hello");
+        System.out.println(c1);
         CacheImmutable c2 = CacheImmutable.valueOf("hello");
         System.out.println(c1 == c2);
     }
@@ -64,5 +65,10 @@ class CacheImmutable {
     @Override
     public int hashCode() {
         return name.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "[CacheImmutable][" + name + "]";
     }
 }
