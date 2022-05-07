@@ -16,11 +16,11 @@ public class FirstThread  extends Thread{
 
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
-            System.out.println(Thread.currentThread().getName() + " " + i);
+//            System.out.println(Thread.currentThread().getName() + " " + i);
 
             if (i == 20) {
+                // 这两个线程不会共享变量i
                 new FirstThread().start();
-
                 new FirstThread().start();
             }
         }

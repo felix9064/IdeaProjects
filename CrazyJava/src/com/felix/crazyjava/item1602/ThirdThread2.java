@@ -1,23 +1,28 @@
 package com.felix.crazyjava.item1602;
 
-import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 /**
- * Created by Felix on 2017/3/7.
+ * ClassName: ThirdThread2
+ * Description: ThirdThread的另一种实现方式
+ * Author: Felix
+ * Date: 2022-05-07
+ * Time: 9:29
  */
-public class ThirdThread implements Callable<Integer> {
+public class ThirdThread2 {
 
     public static void main(String[] args) {
 
-        ThirdThread rt = new ThirdThread();
-        FutureTask<Integer> task = new FutureTask<>(rt);
-        // 先使用Lambda表达式创建Callable<Integer>对象
-        // 使用FutureTask来包装Callable对象
+        FutureTask<Integer> task = new FutureTask<>(() -> {
+            int i = 0;
+            for (; i < 100; i++) {
+                System.out.println(Thread.currentThread().getName() + " 的循环变量 i 的值：" + i);
+            }
+            return i;
+        });
 
         for (int i = 0; i < 100; i++) {
 //            System.out.println(Thread.currentThread().getName() + " 的循环变量 i 的值：" + i);
-
             if (i == 20) {
                 // 实质还是以Callable对象来创建并启动线程的
                 new Thread(task, "有返回值的线程").start();
@@ -28,14 +33,5 @@ public class ThirdThread implements Callable<Integer> {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public Integer call() {
-        int i = 0;
-        for (; i < 100; i++) {
-            System.out.println(Thread.currentThread().getName() + " 的循环变量 i 的值：" + i);
-        }
-        return i;
     }
 }
