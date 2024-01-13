@@ -18,10 +18,12 @@ public class BootstrapTest {
         System.out.println(System.getProperty("java.class.path"));
 
 
+/*
         URL[] urls = sun.misc.Launcher.getBootstrapClassPath().getURLs();
         for (URL url: urls) {
             System.out.println(url.toExternalForm());
         }
+*/
 
     }
 

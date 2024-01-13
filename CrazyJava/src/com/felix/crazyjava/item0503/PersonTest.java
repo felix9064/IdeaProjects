@@ -17,7 +17,7 @@ public class PersonTest {
         p.name = "孙悟空";
         p.eyeNum = 2;
 
-        System.out.println("");
+        System.out.println("修改后p对象的name变量的值是：" + p.name + " p对象的eyeNum变量值是：" + p.eyeNum);
     }
 
 }
